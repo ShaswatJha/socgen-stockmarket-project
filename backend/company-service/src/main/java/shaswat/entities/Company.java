@@ -21,8 +21,8 @@ public class Company {
 
     @Column(length = 8)
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
+//    @GeneratedValue(strategy = GenerationType.AUTO)
 
     @Column(length = 30)
     public String name;

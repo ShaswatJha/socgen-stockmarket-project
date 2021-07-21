@@ -44,8 +44,12 @@ public class CompanyService {
         return "Action Completed";
     }
 
-    public Optional<IPO> getCompanyIPODetails(@PathVariable int id){
-        return ipoRepository.findById(id);
+    public List<IPO> getCompanyIPODetails(@PathVariable int id){
+
+        Query query = new Query();
+        query.addCriteria(Criteria.where("company_id").is(id));
+
+        return mongoTemplate.find(query,IPO.class);
     }
 
     public List<StockPrice> getCompanyStockPrice(int exchangeId, String companyId, LocalDate from_period,
