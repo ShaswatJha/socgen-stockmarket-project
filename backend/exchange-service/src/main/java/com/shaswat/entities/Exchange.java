@@ -11,7 +11,7 @@ import javax.persistence.*;
 @ToString
 @Getter
 @Setter
-@Document(collection = "Exchange")
+@Document(collection = "StockExchange")
 public class Exchange {
 
     @Column(length = 8)
