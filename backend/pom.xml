@@ -68,8 +68,9 @@
 	<modules>
 		<module>exchange-service</module>
 		<module>company-service</module>
-		<module>login-service</module>
 		<module>sector-service</module>
+		<module>excel-service</module>
+		<module>login-service</module>
 	</modules>
 	<build>
 		<plugins>

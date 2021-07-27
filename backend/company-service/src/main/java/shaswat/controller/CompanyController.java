@@ -54,7 +54,7 @@ public class CompanyController {
     }
 
     @GetMapping(value = "/companyIPO/{id}")
-    public Optional<IPO> getCompanyIPODetails(@PathVariable int id){
+    public List<IPO> getCompanyIPODetails(@PathVariable int id){
         return companyService.getCompanyIPODetails(id);
     }
 
@@ -66,7 +66,6 @@ public class CompanyController {
         return companyService.getCompanyStockPrice(exchangeId,companyId,from_period,to_period,periodicity);
 
     }
-
 
     // This service to be made during frontend creation
 
